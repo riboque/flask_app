@@ -1,0 +1,77 @@
+{
+    "name": "Monitor de Dispositivos",
+    "short_name": "Monitor",
+    "description": "Sistema de monitoramento de dispositivos em tempo real",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#667eea",
+    "theme_color": "#667eea",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/static/icons/icon-72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/icon-96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/icon-128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/icon-144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/icon-152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/icon-384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["utilities", "productivity"],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Dashboard",
+            "short_name": "Dashboard",
+            "description": "Ver analytics e estatísticas",
+            "url": "/dashboard",
+            "icons": [{ "src": "/static/icons/icon-96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Chat",
+            "short_name": "Chat",
+            "description": "Acessar chat em tempo real",
+            "url": "/chat/v2",
+            "icons": [{ "src": "/static/icons/icon-96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Monitor",
+            "short_name": "Monitor",
+            "description": "Monitorar dispositivos",
+            "url": "/monitor",
+            "icons": [{ "src": "/static/icons/icon-96.png", "sizes": "96x96" }]
+        }
+    ]
+}

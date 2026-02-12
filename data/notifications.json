@@ -1,0 +1,292 @@
+{
+  "notifications": [
+    {
+      "id": "notif_1",
+      "type": "new_message",
+      "title": "💬 Anônimo",
+      "message": "oi",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "Anônimo"
+      },
+      "created_at": "2025-12-29T00:37:42.238618",
+      "read": false
+    },
+    {
+      "id": "notif_2",
+      "type": "new_message",
+      "title": "💬 Anônimo",
+      "message": "oiiiiiiii",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "Anônimo"
+      },
+      "created_at": "2025-12-29T00:38:21.289825",
+      "read": false
+    },
+    {
+      "id": "notif_3",
+      "type": "new_message",
+      "title": "💬 Anônimo",
+      "message": "de boa",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "Anônimo"
+      },
+      "created_at": "2025-12-29T00:38:55.712309",
+      "read": false
+    },
+    {
+      "id": "notif_4",
+      "type": "new_message",
+      "title": "💬 Anônimo",
+      "message": "mais ou menos",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "Anônimo"
+      },
+      "created_at": "2025-12-29T00:39:13.164233",
+      "read": false
+    },
+    {
+      "id": "notif_5",
+      "type": "new_message",
+      "title": "💬 Anônimo",
+      "message": "sei la",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "Anônimo"
+      },
+      "created_at": "2025-12-29T00:39:23.409702",
+      "read": false
+    },
+    {
+      "id": "notif_6",
+      "type": "new_message",
+      "title": "💬 Anônimo",
+      "message": "humm",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "Anônimo"
+      },
+      "created_at": "2025-12-29T00:39:32.546405",
+      "read": false
+    },
+    {
+      "id": "notif_7",
+      "type": "new_message",
+      "title": "💬 Anônimo",
+      "message": "📷",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "Anônimo"
+      },
+      "created_at": "2025-12-29T00:41:43.820254",
+      "read": false
+    },
+    {
+      "id": "notif_8",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "oiiiiiiiiiiiiii",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T00:51:05.874373",
+      "read": false
+    },
+    {
+      "id": "notif_9",
+      "type": "new_message",
+      "title": "💬 Anônimo",
+      "message": "sei",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "Anônimo"
+      },
+      "created_at": "2025-12-29T00:51:38.718363",
+      "read": false
+    },
+    {
+      "id": "notif_10",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "xxxxxxxxxxxxx",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T00:52:05.933953",
+      "read": false
+    },
+    {
+      "id": "notif_11",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "xxxxxxxxxxxxxxx",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T00:52:24.191983",
+      "read": false
+    },
+    {
+      "id": "notif_12",
+      "type": "new_message",
+      "title": "💬 kali",
+      "message": "gggggggggg",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "kali"
+      },
+      "created_at": "2025-12-29T00:53:01.533146",
+      "read": false
+    },
+    {
+      "id": "notif_13",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "oiiiiiii",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T00:56:27.731399",
+      "read": false
+    },
+    {
+      "id": "notif_14",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "ouuuuuuuuuu",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T00:57:13.528706",
+      "read": false
+    },
+    {
+      "id": "notif_15",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "💡💡💡💡💡💡",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T00:57:25.098339",
+      "read": false
+    },
+    {
+      "id": "notif_16",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "oi",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T01:01:21.438629",
+      "read": false
+    },
+    {
+      "id": "notif_17",
+      "type": "new_message",
+      "title": "💬 neto",
+      "message": "oiiii",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "neto"
+      },
+      "created_at": "2025-12-29T21:29:17.535989",
+      "read": false
+    },
+    {
+      "id": "notif_18",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "oiiiiii",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T22:04:38.264098",
+      "read": false
+    },
+    {
+      "id": "notif_19",
+      "type": "new_message",
+      "title": "💬 nana",
+      "message": "daleeeeeeeee",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nana"
+      },
+      "created_at": "2025-12-29T22:06:41.186474",
+      "read": false
+    },
+    {
+      "id": "notif_20",
+      "type": "new_message",
+      "title": "💬 nana",
+      "message": "ccsncb~~",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nana"
+      },
+      "created_at": "2025-12-29T22:13:54.111830",
+      "read": false
+    },
+    {
+      "id": "notif_21",
+      "type": "new_message",
+      "title": "💬 nana",
+      "message": "rf",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nana"
+      },
+      "created_at": "2025-12-29T22:18:25.191260",
+      "read": false
+    },
+    {
+      "id": "notif_22",
+      "type": "new_message",
+      "title": "💬 nene",
+      "message": "💡",
+      "target_user": null,
+      "data": {
+        "room_id": "general",
+        "username": "nene"
+      },
+      "created_at": "2025-12-29T22:27:30.678440",
+      "read": false
+    }
+  ],
+  "subscriptions": {},
+  "counter": 22
+}

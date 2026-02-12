@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Registrar Dispositivo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{background:#f4f6f9;padding:20px}
+        .card{max-width:600px;margin:50px auto}
+        .info-item{padding:8px 0;border-bottom:1px solid #e9ecef}
+        .info-item:last-child{border-bottom:none}
+    </style>
+</head>
+<body>
+<div class="card p-4">
+    <h3 class="mb-4">Registrar Dispositivo no Monitor</h3>
+    
+    <div id="registerForm" style="display:none">
+        <p class="text-muted mb-3">Clique em "Coletar e Registrar" para enviar as informações do seu dispositivo:</p>
+        <button class="btn btn-primary w-100 mb-2" onclick="coletarERegistrar()">Coletar e Registrar Dispositivo</button>
+        <button class="btn btn-secondary w-100" onclick="location.reload()">Limpar</button>
+    </div>
+
+    <div id="loadingSpinner" style="display:none;text-align:center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Coletando informações...</span>
+        </div>
+        <p class="mt-2">Coletando informações do dispositivo...</p>
+    </div>
+
+    <div id="resultArea" style="display:none">
+        <div class="alert alert-success">
+            <strong>✓ Dispositivo registrado com sucesso!</strong>
+            <p class="mt-2 mb-0">Suas informações foram enviadas para o servidor de monitoramento.</p>
+        </div>
+        <button class="btn btn-outline-primary w-100" onclick="location.href='/chat'">Voltar ao chat</button>
+    </div>
+
+    <div id="errorArea" style="display:none">
+        <div class="alert alert-danger">
+            <strong>✗ Erro ao registrar</strong>
+            <p id="errorMsg" class="mt-2 mb-0"></p>
+        </div>
+        <button class="btn btn-outline-secondary w-100" onclick="location.reload()">Tentar Novamente</button>
+    </div>
+
+    <div id="systemInfoDisplay" style="display:none;margin-top:20px">
+        <h5>Informações do Dispositivo</h5>
+        <div id="infoContent"></div>
+    </div>
+</div>
+
+<script>
+    // Funções utilitárias para coletar info do dispositivo
+    async function obterInfoDispositivo(){
+        const info = {
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent,
+            platform: navigator.platform,
+            language: navigator.language,
+            cookieEnabled: navigator.cookieEnabled,
+            online: navigator.onLine,
+            cores: navigator.hardwareConcurrency || 'N/A',
+            memory: navigator.deviceMemory || 'N/A'
+        };
+        
+        // Tentar obter IP público
+        try{
+            const ipRes = await fetch('https://api.ipify.org?format=json', { mode: 'cors' });
+            const ipData = await ipRes.json();
+            info.ipPublico = ipData.ip;
+        }catch(e){
+            info.ipPublico = 'Não disponível';
+        }
+
+        return info;
+    }
+
+    async function coletarERegistrar(){
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const registerForm = document.getElementById('registerForm');
+        const resultArea = document.getElementById('resultArea');
+        const errorArea = document.getElementById('errorArea');
+        const infoDisplay = document.getElementById('systemInfoDisplay');
+
+        // Mostrar loading
+        registerForm.style.display = 'none';
+        loadingSpinner.style.display = 'block';
+        resultArea.style.display = 'none';
+        errorArea.style.display = 'none';
+        infoDisplay.style.display = 'none';
+
+        try{
+            // Coletar informações
+            const deviceInfo = await obterInfoDispositivo();
+            
+            // Exibir informações coletadas
+            const infoContent = document.getElementById('infoContent');
+            infoContent.innerHTML = `<pre style="background:#f8f9fa;padding:10px;border-radius:6px;max-height:300px;overflow:auto">${JSON.stringify(deviceInfo, null, 2)}</pre>`;
+            infoDisplay.style.display = 'block';
+
+            // Enviar para servidor
+            const resp = await fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ system_info: deviceInfo })
+            });
+
+            if(!resp.ok) throw new Error('Falha ao enviar dados ao servidor');
+
+            // Sucesso
+            loadingSpinner.style.display = 'none';
+            resultArea.style.display = 'block';
+        }catch(err){
+            // Erro
+            loadingSpinner.style.display = 'none';
+            errorArea.style.display = 'block';
+            document.getElementById('errorMsg').textContent = err.message || 'Erro desconhecido';
+        }
+    }
+
+    // Mostrar form ao carregar
+    window.addEventListener('load', ()=>{
+        document.getElementById('registerForm').style.display = 'block';
+    });
+</script>
+</body>
+</html>

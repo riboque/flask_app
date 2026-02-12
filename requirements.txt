@@ -1,0 +1,10 @@
+Flask==2.3.2
+Werkzeug==2.3.6
+psutil==5.9.5
+requests==2.31.0
+flask-socketio==5.3.4
+python-socketio==5.9.0
+cryptography>=41.0.0
+pyopenssl>=23.0.0
+gunicorn==21.2.0
+eventlet==0.33.3

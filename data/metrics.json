@@ -1,0 +1,4053 @@
+{
+  "page_views": {
+    "/api/chat/users-count": 866,
+    "/api/chat/messages": 91,
+    "/chat": 80,
+    "/terms": 41,
+    "/api/monitor/users": 348,
+    "/api/monitor/devices": 350,
+    "/api/monitor/auth_logs": 348,
+    "/api/monitor/registered_users": 350,
+    "/api/monitor/stats": 349,
+    "/monitor": 13,
+    "/": 30,
+    "/api/user_info": 30,
+    "/accept_terms": 28,
+    "/api/register": 14,
+    "/chatv2": 3,
+    "/admin_login": 28,
+    "/admin": 16,
+    "/dashboard": 20,
+    "/api/analytics/dashboard": 92,
+    "/api/notifications/": 158,
+    "/api/chat/send": 16,
+    "/api/chat/v2/messages": 2,
+    "/api/chat/v2/rooms/general/messages": 32,
+    "/api/notifications/read-all": 2,
+    "/chat/v2": 2,
+    "/chat/public": 7,
+    "/chat/": 1,
+    "/tm~~": 1,
+    "/cha": 2,
+    "/api/monitor/registered_users/export/csv": 3,
+    "/api/monitor/devices/export/csv": 1
+  },
+  "hourly_connections": {
+    "2025-12-29 00:00": 783,
+    "2025-12-29 01:00": 47,
+    "2025-12-29 21:00": 24,
+    "2025-12-29 22:00": 366,
+    "2025-12-29 23:00": 88,
+    "2026-01-06 14:00": 605,
+    "2026-01-06 15:00": 230,
+    "2026-01-06 16:00": 1181
+  },
+  "daily_connections": {
+    "2025-12-29": 1308,
+    "2026-01-06": 2016
+  },
+  "geo_data": {},
+  "session_durations": [],
+  "events": [
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:18:30.174669"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:18:30.175088"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:18:30.176124"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:18:30.180489"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:18:30.184338"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:18:30.216458"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:19:30.173189"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:19:30.173532"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:19:30.175048"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:19:30.175998"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:19:30.176699"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:19:30.183312"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:19:30.210862"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:20:30.171591"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:20:30.173136"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:20:30.173563"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:20:30.177113"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:20:30.182934"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:20:30.188603"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:20:30.210402"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:21:30.172746"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:21:30.174614"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:21:30.175051"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:21:30.175403"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:21:30.180469"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:21:30.187023"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:21:30.211433"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:22:30.172252"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:22:30.172644"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:22:30.175304"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:22:30.175696"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:22:30.176098"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:22:30.182967"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:22:30.212308"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:23:30.173371"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:23:30.173724"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:23:30.175725"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:23:30.176308"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:23:30.181865"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:23:30.187295"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:23:30.214159"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:24:30.172430"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:24:30.175540"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:24:30.176479"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:24:30.176813"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:24:30.181388"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:24:30.188871"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:24:30.207098"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:25:30.170906"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:25:30.173287"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:25:30.173579"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:25:30.175734"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:25:30.178766"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:25:30.187978"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:25:30.212492"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:26:30.171002"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:26:30.174553"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:26:30.175568"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:26:30.181265"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:26:30.186328"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:26:30.193721"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:26:30.206055"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:30.182235"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:30.182667"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:27:30.183428"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:30.184432"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:30.187748"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:30.192530"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:30.218587"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:37.189745"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:38.136740"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:38.140034"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:38.141824"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:38.146707"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:38.168486"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:41.170025"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:42.797965"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:42.798974"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:42.808354"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:42.812717"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:42.825245"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:46.168213"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:48.169489"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:48.170678"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:48.171063"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:48.172682"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:48.196862"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:51.171233"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:53.170614"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:53.172328"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:53.173150"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:53.175232"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:53.200260"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:56.168776"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:58.169701"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:58.170377"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:58.171548"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:58.173065"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:27:58.198320"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:01.170342"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:03.171573"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:03.171932"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:03.173392"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:03.177472"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:03.200368"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:06.168919"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:08.168988"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:08.169380"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:08.170302"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:08.171232"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:08.197909"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:11.170611"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:13.170857"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:13.171786"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:13.172958"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:13.176897"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:13.197870"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:16.169290"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:18.169561"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:18.170137"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:18.171079"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:18.172021"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:18.197584"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:21.169813"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:23.170603"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:23.172166"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:23.173416"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:23.174489"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:23.198783"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:26.167901"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:28.170512"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:28.171196"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:28.172657"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:28.173537"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:28.210185"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:28:30.170035"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:31.170193"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:33.171119"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:33.171807"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:33.173203"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:33.177213"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:33.200537"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:36.168902"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:38.170790"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:38.171180"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:38.171515"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:38.172924"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:38.200192"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:43.168610"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:43.168972"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:43.169795"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:43.172071"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:28:43.200547"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:30.172395"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:30.176082"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:29:30.176438"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:30.177239"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:30.181054"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:30.185137"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:30.211461"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:38.540543"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:38.541491"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:38.543645"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:38.549622"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:38.605780"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:42.798454"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:42.798845"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:42.799194"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:42.799828"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:42.834326"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:47.797779"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:47.798405"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:47.800221"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:47.803295"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:47.835709"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:52.798523"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:52.799343"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:52.800770"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:52.804872"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:52.827742"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices/export/csv",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:54.542307"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:57.797280"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:57.801501"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:57.805817"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:57.807875"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:29:57.822434"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:03.169258"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:03.169620"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:03.169956"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:03.170847"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:03.201837"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:07.798151"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:07.798984"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:07.800108"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:07.802159"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:07.830605"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:12.797453"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:12.798274"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:12.799563"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:12.801514"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:12.829686"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users/export/csv",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:14.636841"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:17.799121"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:17.806302"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:17.808220"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:17.838517"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:17.876056"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:22.797878"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:22.800451"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:22.800802"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:22.804087"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:22.825413"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:28.171459"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:28.171919"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:28.173330"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:28.173697"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:28.200671"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:30:30.172721"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:30.173377"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:33.170833"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:33.171192"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:33.171524"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:33.172218"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:33.201061"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:38.169789"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:38.170155"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:38.170498"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:38.171680"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:38.200480"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:43.169847"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:43.170205"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:43.171077"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:43.172019"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:43.198225"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:48.171062"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:48.171411"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:48.171735"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:48.172445"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:48.203191"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:53.170099"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:53.170548"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:53.171137"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:53.171775"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:53.199805"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:58.171364"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:58.171748"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:58.172097"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:58.172766"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:30:58.203112"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:03.169820"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:03.170259"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:03.171223"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:03.172207"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:03.198742"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:08.170566"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:08.171023"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:08.171440"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:08.172163"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:08.201015"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:13.170097"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:13.170561"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:13.171198"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:13.172271"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:13.200240"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:18.170802"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:18.171210"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:18.171532"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:18.172156"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:18.199549"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:23.169992"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:23.170402"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:23.171287"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:23.172159"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:23.197455"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:28.171030"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:28.171405"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:28.171740"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:28.172433"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:28.201220"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:30.170010"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:31:30.172355"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:33.170705"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:33.171327"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:33.171763"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:33.172140"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:33.205158"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:37.799341"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:37.800727"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:37.801937"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:37.803516"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:37.837396"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:43.170034"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:43.170874"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:43.171874"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:43.173898"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:43.200243"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:48.169939"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:48.170755"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:48.171827"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:48.173791"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:48.199486"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:53.171837"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:53.172330"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:53.173746"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:53.175516"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:53.201198"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:58.170018"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:58.170651"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:58.171110"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:58.172280"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:31:58.198989"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:03.169726"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:03.170610"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:03.171619"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:03.174560"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:03.201891"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:08.170041"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:08.170559"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:08.171660"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:08.172670"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:08.198930"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:13.172142"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:13.172586"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:13.172952"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:13.173316"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:13.203871"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:18.170459"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:18.171320"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:18.172399"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:18.174413"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:18.200412"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:23.169870"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:23.170709"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:23.171876"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:23.174760"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:23.203564"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:28.169980"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:28.170803"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:28.171859"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:28.173891"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:28.199065"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:30.169716"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:32:30.172846"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:33.170729"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:33.171516"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:33.172736"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:33.174586"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:33.200950"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:38.170093"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:38.171112"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:38.172265"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:38.175235"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:32:38.201095"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:33:30.170251"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:33:30.174130"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:33:30.176442"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:33:30.186333"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:33:30.192038"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:33:30.198558"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:33:30.215780"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:34:30.171060"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:34:30.172271"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:34:30.172778"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:34:30.174910"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:34:30.185043"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:34:30.191147"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:34:30.208196"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:35:30.175703"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:35:30.182495"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:35:30.183029"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:35:30.183622"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:35:30.190711"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:35:30.225674"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:35:30.241241"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:36:30.178215"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:36:30.178993"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:36:30.196692"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:36:30.198159"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:36:30.210547"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:36:30.219003"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:36:30.242024"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:37:30.202491"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:37:30.208425"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:37:30.212218"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:37:30.218868"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:37:30.228420"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:37:30.229725"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:37:30.309803"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:38:30.177964"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:38:30.179562"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:38:30.181893"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:38:30.190702"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:38:30.226911"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:38:30.236589"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:38:30.245805"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:39:30.174491"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:39:30.175361"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:39:30.182085"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:39:30.182764"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:39:30.201077"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:39:30.202435"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:39:30.289911"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:40:30.179484"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:40:30.181982"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:40:30.189734"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:40:30.193202"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:40:30.207087"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:40:30.209117"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:40:30.283458"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:41:30.174220"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:41:30.184529"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:41:30.191030"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:41:30.200194"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:41:30.203884"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:41:30.205113"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:41:30.300168"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:42:30.177675"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:42:30.183212"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:42:30.184089"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:42:30.184748"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:42:30.186904"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:42:30.197045"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:42:30.297386"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:43:30.175333"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:43:30.176767"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:43:30.178668"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:43:30.186758"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:43:30.191591"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:43:30.273325"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/terms",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:44:02.229227"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:44:30.174061"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:44:30.176234"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:44:30.180794"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:44:30.188678"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:44:30.191322"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:44:30.272842"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:45:30.174429"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:45:30.176110"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:45:30.178379"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:45:30.179580"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:45:30.181606"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:45:30.307760"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:46:30.174943"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:46:30.175887"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:46:30.179747"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:46:30.181128"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:46:30.183963"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:46:30.248848"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:47:30.174683"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:47:30.176578"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:47:30.177307"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:47:30.179910"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:47:30.184615"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:47:30.246822"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:48:30.177654"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:48:30.183719"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:48:30.191190"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:48:30.198950"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:48:30.205052"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:48:30.269961"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:49:30.173886"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:49:30.177759"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:49:30.178738"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:49:30.184355"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:49:30.192672"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:49:30.235272"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:50:30.174331"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:50:30.177418"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:50:30.178324"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:50:30.179661"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:50:30.186867"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:50:30.246026"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:11.452078"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:11.826380"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/devices",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:15.501103"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:15.509673"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/auth_logs",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:15.511656"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/registered_users",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:15.513547"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/monitor/stats",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:15.585790"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:16.826122"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "127.0.0.1"
+      },
+      "timestamp": "2026-01-06T16:51:20.783726"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:22.173542"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/terms",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:25.370903"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/user_info",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:25.457408"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:27.170504"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/accept_terms",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:28.927031"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/chat",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:28.978630"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:29.082686"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:32.173142"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:34.081865"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:37.172312"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:39.172079"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:42.173140"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:44.169844"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:47.240876"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:49.172026"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:52.172214"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:54.173111"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:57.171356"
+    },
+    {
+      "type": "page_view",
+      "data": {
+        "page": "/api/chat/users-count",
+        "ip": "192.168.62.88"
+      },
+      "timestamp": "2026-01-06T16:51:59.177352"
+    }
+  ]
+}

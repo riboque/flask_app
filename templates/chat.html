@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Sistema Conectado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        .navbar {
+            background: rgba(0,0,0,0.2) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .navbar-brand { color: white !important; font-weight: bold; font-size: 18px; }
+        .btn-voltar { background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3); }
+        .btn-voltar:hover { background: rgba(255,255,255,0.3); color: white; }
+        .chat-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+        }
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .connection-status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .connection-status.online {
+            background: #27ae60;
+            color: white;
+        }
+        .connection-status.polling {
+            background: #f39c12;
+            color: white;
+        }
+        #chatBox {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .chat-message {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .chat-message .username {
+            color: #667eea;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .chat-message .timestamp {
+            font-size: 11px;
+            color: #999;
+            display: block;
+            margin-top: 5px;
+        }
+        .chat-message .text {
+            color: #333;
+            word-wrap: break-word;
+        }
+        .chat-input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+        }
+        .input-group {
+            gap: 10px;
+            display: flex;
+        }
+        .input-group input {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+        .input-group input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .input-group button {
+            background: #667eea;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            padding: 10px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .input-group button:hover {
+            background: #764ba2;
+        }
+        .input-group button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        #chatName { flex: 0 0 150px; }
+        #chatInput { flex: 1; }
+        .empty-state {
+            text-align: center;
+            color: #999;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .empty-state i { font-size: 48px; opacity: 0.3; margin-bottom: 20px; }
+        .users-info {
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border-top: 1px solid #e0e0e0;
+            font-size: 12px;
+            color: #666;
+        }
+        .users-info .badge {
+            background: #667eea;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-left: 5px;
+        }
+        .error-banner {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .error-banner.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar sticky-top">
+    <div class="container-fluid">
+        <span class="navbar-brand"><i class="fas fa-comments"></i> Chat ao Vivo</span>
+        <a href="/" class="btn btn-voltar btn-sm"><i class="fas fa-arrow-left"></i> Voltar</a>
+    </div>
+</nav>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <span><i class="fas fa-comments"></i> Chat em Tempo Real</span>
+        <span class="connection-status" id="connectionStatus">
+            <i class="fas fa-circle"></i> Conectando...
+        </span>
+    </div>
+
+    <div id="chatBox">
+        <div class="empty-state">
+            <i class="fas fa-comments"></i>
+            <p>Conectando ao servidor...</p>
+        </div>
+    </div>
+
+    <div class="users-info">
+        <i class="fas fa-users"></i> Usuários conectados: <span class="badge" id="userCount">0</span>
+    </div>
+
+    <div class="chat-input-area">
+        <div class="error-banner" id="errorBanner"></div>
+        <div class="input-group">
+            <input type="text" id="chatName" placeholder="Seu nome" value="Usuário">
+            <input type="text" id="chatInput" placeholder="Digite uma mensagem e pressione Enter...">
+            <button onclick="sendMessage()" id="sendBtn"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const chatBox = document.getElementById('chatBox');
+    const nameInput = document.getElementById('chatName');
+    const messageInput = document.getElementById('chatInput');
+    const statusEl = document.getElementById('connectionStatus');
+    const userCountEl = document.getElementById('userCount');
+    const errorBanner = document.getElementById('errorBanner');
+    const sendBtn = document.getElementById('sendBtn');
+    
+    let lastMessageId = 0;
+    let pollInterval = null;
+    let userCountInterval = null;
+
+    function registerSystemInfo() {
+        // Coleta e envia informações do sistema para o monitor
+        try {
+            const info = {
+                sistema_operacional: {
+                    sistema: navigator.platform,
+                    versao: navigator.userAgent.substring(0, 100)
+                },
+                hostname: 'Browser-' + Math.random().toString(36).substring(7),
+                ip_local: 'desconhecido'
+            };
+            
+            fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ system_info: info })
+            })
+            .then(r => {
+                if (r.ok) console.log('✓ Sistema registrado no monitor');
+            })
+            .catch(err => console.log('Info: Sistema não pôde ser registrado'));
+        } catch (err) {
+            console.log('Info: Erro ao registrar sistema');
+        }
+    }
+
+    function init() {
+        console.log('🚀 Chat iniciado com polling HTTP');
+        updateStatus('online', 'Conectado');
+        registerSystemInfo();  // Registrar info do sistema
+        startPolling();
+        loadMessages();
+        updateUserCount();
+    }
+
+    function updateStatus(status, text) {
+        const statusMap = {
+            'online': { class: 'online', icon: '✓' },
+            'polling': { class: 'polling', icon: '⟳' }
+        };
+        const s = statusMap[status] || statusMap['polling'];
+        statusEl.className = `connection-status ${s.class}`;
+        statusEl.innerHTML = `<i class="fas fa-circle"></i> ${text}`;
+    }
+
+    function showError(msg) {
+        errorBanner.textContent = msg;
+        errorBanner.classList.add('show');
+        setTimeout(() => errorBanner.classList.remove('show'), 5000);
+    }
+
+    function loadMessages() {
+        fetch(`/api/chat/messages?since_id=${lastMessageId}`)
+            .then(r => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                return r.json();
+            })
+            .then(data => {
+                if (data.mensagens && data.mensagens.length > 0) {
+                    data.mensagens.forEach(msg => {
+                        addMessageToChat(msg.username, msg.message, msg.timestamp);
+                        lastMessageId = msg.id;
+                    });
+                }
+                updateStatus('online', 'Conectado');
+            })
+            .catch(err => {
+                console.error('Erro ao carregar mensagens:', err);
+                updateStatus('polling', 'Sincronizando...');
+            });
+    }
+
+    function updateUserCount() {
+        fetch('/api/chat/users-count')
+            .then(r => r.json())
+            .then(data => {
+                userCountEl.textContent = data.total || 0;
+            })
+            .catch(err => console.error('Erro ao atualizar usuários:', err));
+    }
+
+    function startPolling() {
+        loadMessages();
+        pollInterval = setInterval(loadMessages, 2000);
+        userCountInterval = setInterval(updateUserCount, 5000);
+    }
+
+    function sendMessage() {
+        const username = nameInput.value.trim() || 'Anônimo';
+        const message = messageInput.value.trim();
+        
+        if (!message) {
+            showError('Mensagem vazia!');
+            return;
+        }
+
+        sendBtn.disabled = true;
+        
+        fetch('/api/chat/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, message })
+        })
+        .then(r => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json();
+        })
+        .then(data => {
+            if (data.ok) {
+                console.log('✓ Mensagem enviada');
+                messageInput.value = '';
+                messageInput.focus();
+                setTimeout(loadMessages, 100);
+            } else {
+                showError('Erro: ' + data.erro);
+            }
+        })
+        .catch(err => {
+            console.error('✗ Erro ao enviar:', err);
+            showError('Erro ao enviar: ' + err.message);
+        })
+        .finally(() => {
+            sendBtn.disabled = false;
+        });
+    }
+
+    function addMessageToChat(username, message, timestamp) {
+        const isEmpty = chatBox.querySelector('.empty-state');
+        if (isEmpty) chatBox.innerHTML = '';
+
+        const div = document.createElement('div');
+        div.className = 'chat-message';
+        
+        const time = new Date(timestamp).toLocaleTimeString('pt-BR', { 
+            hour: '2-digit', 
+            minute: '2-digit' 
+        });
+        
+        div.innerHTML = `
+            <span class="username"><i class="fas fa-user-circle"></i> ${escapeHtml(username)}</span>
+            <div class="text">${escapeHtml(message)}</div>
+            <span class="timestamp">${time}</span>
+        `;
+        
+        chatBox.appendChild(div);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function escapeHtml(text) {
+        const map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        };
+        return text.replace(/[&<>"']/g, m => map[m]);
+    }
+
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+
+    nameInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') messageInput.focus();
+    });
+
+    document.addEventListener('DOMContentLoaded', init);
+
+    window.addEventListener('beforeunload', () => {
+        if (pollInterval) clearInterval(pollInterval);
+        if (userCountInterval) clearInterval(userCountInterval);
+    });
+</script>
+</body>
+</html>

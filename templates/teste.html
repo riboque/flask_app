@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exportador de Conexões - Máquina Virtual vs Física</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #ffc107;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .container-main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), #0056b3);
+            color: white;
+            border-radius: 12px 12px 0 0 !important;
+            padding: 20px;
+            border: none;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .btn-custom {
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #0056b3);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, var(--success), #218838);
+            border: none;
+        }
+        
+        .btn-success:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger), #c82333);
+            border: none;
+        }
+        
+        .btn-danger:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+        }
+        
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .info-section h5 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .info-value {
+            color: var(--primary);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .status-vm {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-physical {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-unknown {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .spinner-border {
+            color: var(--primary);
+        }
+        
+        .table-custom {
+            margin-top: 20px;
+        }
+        
+        .table-custom thead th {
+            background: linear-gradient(135deg, var(--primary), #0056b3);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-weight: 600;
+        }
+        
+        .table-custom tbody td {
+            padding: 12px 15px;
+            border-color: #e0e0e0;
+        }
+        
+        .table-custom tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .export-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .badge-custom {
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        
+        .badge-active {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .badge-inactive {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .progress-bar-custom {
+            transition: width 0.3s ease;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 20px;
+            opacity: 0.9;
+        }
+        
+        .error-alert {
+            display: none;
+        }
+        
+        .success-alert {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-main">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-network-wired"></i> Monitor de Conexões</h1>
+            <p>Detecte e exporte informações de máquinas virtuais e físicas</p>
+        </div>
+
+        <!-- Alertas -->
+        <div class="alert alert-success alert-dismissible fade show success-alert" role="alert" id="successAlert">
+            <i class="fas fa-check-circle"></i> <span id="successMsg"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        
+        <div class="alert alert-danger alert-dismissible fade show error-alert" role="alert" id="errorAlert">
+            <i class="fas fa-exclamation-circle"></i> <span id="errorMsg"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+
+        <!-- Seção Principal -->
+        <div class="row">
+            <!-- Painel de Controle -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-cogs"></i> Painel de Controle
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">Clique no botão abaixo para coletar informações da rede:</p>
+                        
+                        <button class="btn btn-primary btn-custom w-100" onclick="coletarInformacoes()">
+                            <i class="fas fa-sync-alt"></i> Coletar Informações
+                        </button>
+                        
+                        <div class="loading" id="loading">
+                            <div class="spinner-border spinner-border-sm" role="status">
+                                <span class="visually-hidden">Carregando...</span>
+                            </div>
+                            <p class="mt-2">Coletando dados...</p>
+                        </div>
+                        
+                        <hr>
+                        
+                        <h6 class="mt-4">Exportar Dados:</h6>
+                        <div class="export-buttons">
+                            <a href="/export/json" class="btn btn-success btn-custom" target="_blank">
+                                <i class="fas fa-file-code"></i> JSON
+                            </a>
+                            <a href="/export/csv" class="btn btn-danger btn-custom" target="_blank">
+                                <i class="fas fa-file-csv"></i> CSV
+                            </a>
+                            <a href="/export/html" class="btn btn-primary btn-custom" target="_blank">
+                                <i class="fas fa-file-html5"></i> HTML
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações do Sistema -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-info-circle"></i> Informações do Sistema
+                    </div>
+                    <div class="card-body" id="systemInfo">
+                        <p class="text-muted text-center">Clique em "Coletar Informações" para visualizar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detecção de VM -->
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-microchip"></i> Detecção de Máquina Virtual
+                    </div>
+                    <div class="card-body" id="vmDetection">
+                        <p class="text-muted text-center">Aguardando coleta de dados...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recursos do Sistema -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-tachometer-alt"></i> Uso de Recursos
+                    </div>
+                    <div class="card-body" id="resourcesInfo">
+                        <p class="text-muted text-center">Aguardando coleta de dados...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interfaces de Rede -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-ethernet"></i> Interfaces de Rede
+                    </div>
+                    <div class="card-body" id="interfacesInfo">
+                        <p class="text-muted text-center">Aguardando coleta de dados...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conexões Ativas -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-plug"></i> Conexões Ativas
+                    </div>
+                    <div class="card-body" id="connectionsInfo">
+                        <p class="text-muted text-center">Aguardando coleta de dados...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat / Bate-papo -->
+        <div class="row mt-4">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-comments"></i> Bate-papo (Transmissão de mensagens)
+                    </div>
+                    <div class="card-body">
+                        <div id="chatMessages" style="height:300px; overflow:auto; border:1px solid #e9ecef; padding:10px; border-radius:6px; background:white;"></div>
+                        <div class="d-flex mt-3">
+                            <input id="chatName" class="form-control me-2" placeholder="Seu nome (opcional)">
+                            <input id="chatInput" class="form-control me-2" placeholder="Digite sua mensagem...">
+                            <button class="btn btn-primary" onclick="sendChat()">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i> Conectados
+                    </div>
+                    <div class="card-body" id="clientsList">
+                        <p class="text-muted text-center">Aguardando conexões...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Total: <span id="clientsCount">0</span></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p><i class="fas fa-copyright"></i> 2025 Monitor de Conexões | Versão 1.0</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script>
+        /**
+         * Coletar todas as informações da rede
+         */
+        async function coletarInformacoes() {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'block';
+            
+            try {
+                const response = await fetch('/api/info');
+                if (!response.ok) throw new Error('Erro ao coletar informações');
+                
+                const data = await response.json();
+                
+                // Atualizar UI
+                exibirInformacoesDoSistema(data);
+                exibirDeteccaoVM(data);
+                exibirRecursos(data);
+                exibirInterfaces(data);
+                exibirConexoes(data);
+                
+                mostrarAlerta('Informações coletadas com sucesso!', 'success');
+            } catch (error) {
+                console.error('Erro:', error);
+                mostrarAlerta(`Erro ao coletar informações: ${error.message}`, 'danger');
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+        
+        /**
+         * Exibir informações do sistema
+         */
+        function exibirInformacoesDoSistema(data) {
+            const html = `
+                <div class="info-section">
+                    <div class="info-row">
+                        <span class="info-label">Hostname:</span>
+                        <span class="info-value">${data.hostname}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">IP Local:</span>
+                        <span class="info-value">${data.ip_local}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">IP Público:</span>
+                        <span class="info-value">${data.ip_publico}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Sistema:</span>
+                        <span class="info-value">${data.sistema_operacional.sistema} ${data.sistema_operacional.versao}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Arquitetura:</span>
+                        <span class="info-value">${data.sistema_operacional.arquitetura}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Processador:</span>
+                        <span class="info-value">${data.sistema_operacional.processador || 'N/A'}</span>
+                    </div>
+                </div>
+            `;
+            document.getElementById('systemInfo').innerHTML = html;
+        }
+        
+        /**
+         * Exibir detecção de VM
+         */
+        function exibirDeteccaoVM(data) {
+            const eh_vm = data.maquina_virtual.eh_vm;
+            const tipo = data.maquina_virtual.tipo;
+            const statusClass = eh_vm ? 'status-vm' : 'status-physical';
+            const statusText = eh_vm ? '🖥️ Máquina Virtual' : '💻 Máquina Física';
+            
+            const html = `
+                <div class="info-section">
+                    <h5>Status</h5>
+                    <p class="text-center">
+                        <span class="status-badge ${statusClass}">
+                            ${statusText}
+                        </span>
+                    </p>
+                    <div class="info-row">
+                        <span class="info-label">Tipo Detectado:</span>
+                        <span class="info-value">${tipo || 'Desconhecido'}</span>
+                    </div>
+                </div>
+            `;
+            document.getElementById('vmDetection').innerHTML = html;
+        }
+        
+        /**
+         * Exibir uso de recursos
+         */
+        function exibirRecursos(data) {
+            const cpu = data.recursos.cpu_percent;
+            const mem = data.recursos.memoria;
+            const disk = data.recursos.disco;
+            
+            const html = `
+                <div class="info-section">
+                    <h6 class="mb-3">CPU</h6>
+                    <div class="progress mb-3">
+                        <div class="progress-bar progress-bar-custom" style="width: ${cpu}%">
+                            ${cpu.toFixed(1)}%
+                        </div>
+                    </div>
+                    
+                    <h6 class="mb-3">Memória</h6>
+                    <div class="progress mb-3">
+                        <div class="progress-bar progress-bar-custom bg-success" style="width: ${mem.percentual}%">
+                            ${mem.percentual.toFixed(1)}%
+                        </div>
+                    </div>
+                    <small class="text-muted">${mem.usada_gb.toFixed(2)} GB / ${mem.total_gb.toFixed(2)} GB</small>
+                    
+                    <h6 class="mb-3 mt-3">Disco</h6>
+                    <div class="progress mb-3">
+                        <div class="progress-bar progress-bar-custom bg-warning" style="width: ${disk.percentual}%">
+                            ${disk.percentual.toFixed(1)}%
+                        </div>
+                    </div>
+                    <small class="text-muted">${disk.usado_gb.toFixed(2)} GB / ${disk.total_gb.toFixed(2)} GB</small>
+                </div>
+            `;
+            document.getElementById('resourcesInfo').innerHTML = html;
+        }
+        
+        /**
+         * Exibir interfaces de rede
+         */
+        function exibirInterfaces(data) {
+            let html = '<table class="table table-striped table-custom">';
+            html += '<thead><tr><th>Interface</th><th>Status</th><th>Tipo</th><th>Endereço</th></tr></thead><tbody>';
+            
+            data.interfaces_rede.forEach(iface => {
+                if (iface.nome) {
+                    const status = iface.ativa ? '✓ Ativa' : '✗ Inativa';
+                    const badge = iface.ativa ? 'badge-active' : 'badge-inactive';
+                    
+                    iface.enderecos.forEach(addr => {
+                        html += `<tr>
+                            <td><strong>${iface.nome}</strong></td>
+                            <td><span class="badge badge-custom ${badge}">${status}</span></td>
+                            <td>${addr.tipo}</td>
+                            <td><code>${addr.endereco}</code></td>
+                        </tr>`;
+                    });
+                }
+            });
+            
+            html += '</tbody></table>';
+            document.getElementById('interfacesInfo').innerHTML = html;
+        }
+        
+        /**
+         * Exibir conexões ativas
+         */
+        function exibirConexoes(data) {
+            let html = '<table class="table table-striped table-custom">';
+            html += '<thead><tr><th>IP Local</th><th>Porta</th><th>IP Remoto</th><th>Porta</th><th>Status</th></tr></thead><tbody>';
+            
+            data.conexoes_ativas.slice(0, 10).forEach(conn => {
+                if (conn.ip_local) {
+                    html += `<tr>
+                        <td><code>${conn.ip_local}</code></td>
+                        <td>${conn.porta_local || 'N/A'}</td>
+                        <td><code>${conn.ip_remoto || 'N/A'}</code></td>
+                        <td>${conn.porta_remota || 'N/A'}</td>
+                        <td><span class="badge bg-info">${conn.status}</span></td>
+                    </tr>`;
+                }
+            });
+            
+            html += '</tbody></table>';
+            document.getElementById('connectionsInfo').innerHTML = html;
+        }
+        
+        /**
+         * Mostrar alerta
+         */
+        function mostrarAlerta(mensagem, tipo) {
+            const alert = document.getElementById(tipo === 'success' ? 'successAlert' : 'errorAlert');
+            const msg = document.getElementById(tipo === 'success' ? 'successMsg' : 'errorMsg');
+            msg.textContent = mensagem;
+            alert.style.display = 'block';
+            setTimeout(() => alert.style.display = 'none', 5000);
+        }
+        
+        // Coletar informações ao carregar a página
+        window.addEventListener('load', coletarInformacoes);
+
+        // ----------------------
+        // Chat via Socket.IO
+        // ----------------------
+        const socket = io();
+        const chatMessagesEl = document.createElement('div');
+        
+        function renderMessage(msg) {
+            const el = document.createElement('div');
+            el.className = 'mb-2';
+            el.innerHTML = `<strong>${msg.username}:</strong> ${escapeHtml(msg.message)} <small class="text-muted">${new Date(msg.timestamp).toLocaleTimeString()}</small>`;
+            return el;
+        }
+        
+        function escapeHtml(unsafe) {
+            return unsafe
+                 .replaceAll('&', '&amp;')
+                 .replaceAll('<', '&lt;')
+                 .replaceAll('>', '&gt;')
+                 .replaceAll('"', '&quot;')
+                 .replaceAll("'", '&#039;');
+        }
+        
+        socket.on('connect', () => {
+            console.log('Socket conectado', socket.id);
+            // atualizar lista de clientes
+            fetch('/api/clients').then(r => r.json()).then(d => updateClients(d.clients || []));
+        });
+        
+        socket.on('chat_history', msgs => {
+            const box = document.getElementById('chatMessages');
+            box.innerHTML = '';
+            msgs.forEach(m => box.appendChild(renderMessage(m)));
+            box.scrollTop = box.scrollHeight;
+        });
+        
+        socket.on('new_message', msg => {
+            const box = document.getElementById('chatMessages');
+            box.appendChild(renderMessage(msg));
+            box.scrollTop = box.scrollHeight;
+        });
+        
+        socket.on('clients_update', clients => {
+            updateClients(clients || []);
+        });
+        
+        function updateClients(clients) {
+            const el = document.getElementById('clientsList');
+            const countEl = document.getElementById('clientsCount');
+            if (!el) return;
+            el.innerHTML = '';
+            if (!clients || clients.length === 0) {
+                el.innerHTML = '<p class="text-muted text-center">Nenhum cliente conectado</p>';
+            } else {
+                clients.forEach(c => {
+                    const row = document.createElement('div');
+                    row.className = 'd-flex justify-content-between align-items-center py-2 border-bottom';
+                    row.innerHTML = `<div><code>${c.ip}</code><br><small class="text-muted">${c.user_agent || ''}</small></div><div><small>${new Date(c.connected_at).toLocaleTimeString()}</small></div>`;
+                    el.appendChild(row);
+                });
+            }
+            if (countEl) countEl.textContent = clients ? clients.length : 0;
+        }
+        
+        function sendChat() {
+            const input = document.getElementById('chatInput');
+            const name = document.getElementById('chatName');
+            const text = input.value.trim();
+            if (!text) return;
+            const payload = { username: name.value.trim() || null, message: text };
+            socket.emit('chat_message', payload);
+            input.value = '';
+        }
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && document.activeElement.id === 'chatInput') {
+                sendChat();
+            }
+        });
+    </script>
+</body>
+</html>

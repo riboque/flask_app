@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<!-- 
+################################################################################
+### ESTE É O ARQUIVO CORRETO CRIADO EM 2025-12-15
+### SE VOCÊ VER ESTE COMENTÁRIO, SIGNIFICA QUE O ARQUIVO CORRETO ESTÁ SENDO SERVIDO
+### PAINEL DE CONTROLE - LAYOUT MODERNO COM BOOTSTRAP 5 + FONT AWESOME 6
+################################################################################
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Monitor de Usuários - Painel de Controle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css?v=20251215" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=20251215" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #000000;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            color: #333;
+        }
+
+        .navbar-top {
+            background: rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+        }
+
+        .btn-logout {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .btn-logout:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .container-main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 20px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-export {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-export:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .table {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .table thead th {
+            background: #f5f7fa;
+            border-bottom: 2px solid #e0e0e0;
+            color: #333;
+            font-weight: 600;
+            padding: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 12px;
+        }
+
+        .table tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        .table tbody td {
+            padding: 15px;
+            vertical-align: middle;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-admin {
+            background: #667eea;
+            color: white;
+        }
+
+        .badge-user {
+            background: #27ae60;
+            color: white;
+        }
+
+        .badge-active {
+            background: #27ae60;
+            color: white;
+        }
+
+        .badge-inactive {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .filter-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-refresh {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+        }
+
+        .btn-refresh:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading-spinner.show {
+            display: block;
+        }
+
+        .table-responsive {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-top sticky-top">
+        <div class="container-fluid px-3">
+            <span class="navbar-brand">
+                <i class="fas fa-users"></i> Painel de Controle - Monitor de Usuários
+            </span>
+            <div class="user-info">
+                <span id="userName">Admin</span>
+                <button class="btn btn-sm btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-main">
+        <!-- Header -->
+        <div class="page-header">
+            <h1><i class="fas fa-chart-bar"></i> Monitor de Sistema</h1>
+            <p>Painel centralizado para visualizar dispositivos, usuários e atividades em tempo real</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <i class="fas fa-users"></i>
+                <div class="stat-label">Total de Usuários</div>
+                <div class="stat-value" id="totalUsers">0</div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-user-shield"></i>
+                <div class="stat-label">Administradores</div>
+                <div class="stat-value" id="adminCount">0</div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-user-check"></i>
+                <div class="stat-label">Usuários Ativos</div>
+                <div class="stat-value" id="activeCount">0</div>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-comments"></i>
+                <div class="stat-label">Total de Mensagens</div>
+                <div class="stat-value" id="totalMessages">0</div>
+            </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filter-section">
+            <div class="row align-items-end">
+                <div class="col-md-4">
+                    <label for="roleFilter" class="form-label">Filtrar por Papel</label>
+                    <select id="roleFilter" class="form-select" onchange="loadUsers()">
+                        <option value="">Todos</option>
+                        <option value="admin">Administrador</option>
+                        <option value="user">Usuário Comum</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="statusFilter" class="form-label">Filtrar por Status</label>
+                    <select id="statusFilter" class="form-select" onchange="loadUsers()">
+                        <option value="">Todos</option>
+                        <option value="active">Ativo</option>
+                        <option value="inactive">Inativo</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-refresh w-100" onclick="loadUsers()">
+                        <i class="fas fa-sync-alt"></i> Atualizar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela de Usuários -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-table"></i> Lista de Usuários
+            </div>
+            <div class="card-body p-0">
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Carregando...</span>
+                    </div>
+                    <p class="text-muted mt-2">Carregando usuários...</p>
+                </div>
+
+                <div class="table-responsive" id="tableContainer" style="display: none;">
+                    <table class="table" id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>Usuário</th>
+                                <th>Email</th>
+                                <th>Papel</th>
+                                <th>Status</th>
+                                <th>Criado em</th>
+                                <th>Último Login</th>
+                                <th>IP Última Conexão</th>
+                                <th>Mensagens</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <i class="fas fa-inbox"></i>
+                    <h4>Nenhum usuário encontrado</h4>
+                    <p>Não há usuários que correspondam aos filtros selecionados</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dispositivos Conectados -->
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                    <i class="fas fa-laptop"></i> Dispositivos Conectados
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-sm btn-export" id="exportJsonBtn" title="Exportar mensagens em JSON">
+                        <i class="fas fa-file-export"></i> JSON
+                    </button>
+                    <button type="button" class="btn btn-sm btn-export" id="exportCsvBtn" title="Exportar dispositivos em CSV">
+                        <i class="fas fa-file-csv"></i> CSV
+                    </button>
+                    <button type="button" class="btn btn-sm btn-export" id="refreshDevicesBtn" title="Atualizar lista de dispositivos">
+                        <i class="fas fa-sync-alt"></i> Atualizar
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="devicesLoadingSpinner" class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Carregando...</span>
+                    </div>
+                    <p class="mt-2 text-muted">Carregando dispositivos...</p>
+                </div>
+                <div class="table-responsive" id="devicesTableContainer" style="display: none;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>IP Conexão</th>
+                                <th>IP Local</th>
+                                <th>Dispositivo/Sistema</th>
+                                <th>Versão</th>
+                                <th>Arquitetura</th>
+                                <th>Processador</th>
+                                <th>RAM/Disk</th>
+                                <th>É VM?</th>
+                                <th>Conectado em</th>
+                                <th>User Agent</th>
+                            </tr>
+                        </thead>
+                        <tbody id="devicesTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="empty-state" id="devicesEmptyState" style="display: none;">
+                    <i class="fas fa-inbox"></i>
+                    <h4>Nenhum dispositivo conectado</h4>
+                    <p>Aguardando conexão de dispositivos...</p>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-grid mt-4" id="deviceStatsContainer" style="display: none;">
+                    <div class="stat-box">
+                        <i class="fas fa-laptop"></i>
+                        <div class="stat-label">Dispositivos Ativos</div>
+                        <div class="stat-value" id="totalDevices">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-server"></i>
+                        <div class="stat-label">Sistemas Registrados</div>
+                        <div class="stat-value" id="totalSystems">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-comments"></i>
+                        <div class="stat-label">Total de Mensagens</div>
+                        <div class="stat-value" id="totalChatMessages">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NOVA SECAO: Usuarios Registrados com Dados Coletados -->
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                    <i class="fas fa-users-cog"></i> Usuarios Registrados (Dados Coletados)
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-sm btn-export" id="exportRegisteredCsvBtn" title="Exportar dados em CSV">
+                        <i class="fas fa-file-csv"></i> CSV
+                    </button>
+                    <button type="button" class="btn btn-sm btn-export" id="refreshRegisteredBtn" title="Atualizar">
+                        <i class="fas fa-sync-alt"></i> Atualizar
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div id="registeredLoadingSpinner" class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-2 text-muted">Carregando dados...</p>
+                </div>
+                <div class="table-responsive" id="registeredTableContainer" style="display: none;">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Status</th>
+                                <th>IP Conexao</th>
+                                <th>Hostname</th>
+                                <th>IP Local</th>
+                                <th>Sistema</th>
+                                <th>Versao</th>
+                                <th>Arquitetura</th>
+                                <th>Processador</th>
+                                <th>VM?</th>
+                                <th>Registrado em</th>
+                            </tr>
+                        </thead>
+                        <tbody id="registeredTableBody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="empty-state" id="registeredEmptyState" style="display: none;">
+                    <i class="fas fa-inbox"></i>
+                    <h4>Nenhum usuario registrado</h4>
+                    <p>Aguardando usuarios aceitarem os termos...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Atividade de Autenticação -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-history"></i> Atividade de Autenticação (últimos eventos)
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-sm" id="authLogsTable">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Evento</th>
+                                <th>Usuário</th>
+                                <th>IP</th>
+                                <th>Detalhes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="authLogsBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funcao para carregar usuarios registrados com dados completos
+        async function loadRegisteredUsers() {
+            document.getElementById('registeredLoadingSpinner').style.display = 'block';
+            document.getElementById('registeredTableContainer').style.display = 'none';
+            document.getElementById('registeredEmptyState').style.display = 'none';
+
+            try {
+                const response = await fetch('/api/monitor/registered_users');
+
+                if (!response.ok) {
+                    console.warn('Erro ao carregar usuarios registrados:', response.status);
+                    document.getElementById('registeredEmptyState').style.display = 'block';
+                    document.getElementById('registeredLoadingSpinner').style.display = 'none';
+                    return;
+                }
+
+                const data = await response.json();
+                populateRegisteredTable(data.users || []);
+
+            } catch (error) {
+                console.warn('Erro ao carregar usuarios registrados:', error.message);
+                document.getElementById('registeredEmptyState').style.display = 'block';
+            } finally {
+                document.getElementById('registeredLoadingSpinner').style.display = 'none';
+            }
+        }
+
+        function populateRegisteredTable(users) {
+            const tbody = document.getElementById('registeredTableBody');
+            tbody.innerHTML = '';
+
+            if (users.length === 0) {
+                document.getElementById('registeredEmptyState').style.display = 'block';
+                return;
+            }
+
+            users.forEach(user => {
+                const statusClass = user.status === 'online' ? 'bg-success' : 'bg-secondary';
+                const vmStatus = user.eh_vm ? `Sim (${user.tipo_vm || 'VM'})` : 'Nao';
+                const vmClass = user.eh_vm ? 'bg-warning' : 'bg-success';
+                const regDate = user.registered_at ? new Date(user.registered_at).toLocaleString('pt-BR') : '-';
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${escapeHtml(user.username || '-')}</strong></td>
+                    <td><span class="badge ${statusClass}">${user.status || 'offline'}</span></td>
+                    <td><code>${escapeHtml(user.ip || '-')}</code></td>
+                    <td>${escapeHtml(user.hostname || '-')}</td>
+                    <td><code>${escapeHtml(user.ip_local || '-')}</code></td>
+                    <td>${escapeHtml(user.sistema || '-')}</td>
+                    <td>${escapeHtml(user.versao_so || '-')}</td>
+                    <td>${escapeHtml(user.arquitetura || '-')}</td>
+                    <td><small>${escapeHtml(user.processador || '-')}</small></td>
+                    <td><span class="badge ${vmClass}">${vmStatus}</span></td>
+                    <td><small>${regDate}</small></td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            document.getElementById('registeredTableContainer').style.display = 'block';
+        }
+
+        // Botao de atualizar e exportar usuarios registrados
+        document.getElementById('refreshRegisteredBtn')?.addEventListener('click', loadRegisteredUsers);
+        
+        document.getElementById('exportRegisteredCsvBtn')?.addEventListener('click', () => {
+            window.location.href = '/api/monitor/registered_users/export/csv';
+        });
+
+        async function checkAuth() {
+            // Monitor é público - sem autenticação obrigatória
+            const sessionId = document.cookie.split('; ').find(row => row.startsWith('session_id='));
+            if (!sessionId) {
+                console.log('Monitor acessado sem autenticação (permitido)');
+            }
+        }
+
+        async function loadUsers() {
+            const roleFilter = document.getElementById('roleFilter').value;
+            const statusFilter = document.getElementById('statusFilter').value;
+
+            document.getElementById('loadingSpinner').classList.add('show');
+            document.getElementById('tableContainer').style.display = 'none';
+            document.getElementById('emptyState').style.display = 'none';
+
+            try {
+                const response = await fetch('/api/monitor/users?role=' + roleFilter + '&status=' + statusFilter);
+
+                if (!response.ok) {
+                    throw new Error(`Erro ${response.status}: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                if (data.users && data.users.length > 0) {
+                    updateStats(data.users);
+                    populateTable(data.users);
+                } else {
+                    document.getElementById('emptyState').style.display = 'block';
+                    updateStats([]);
+                }
+
+            } catch (error) {
+                console.warn('Aviso ao carregar usuários:', error);
+                document.getElementById('emptyState').style.display = 'block';
+                updateStats([]);
+            } finally {
+                document.getElementById('loadingSpinner').classList.remove('show');
+            }
+        }
+
+        function updateStats(users) {
+            const admins = users.filter(u => u.role === 'admin').length;
+            const active = users.filter(u => u.active).length;
+            const totalMessages = users.reduce((sum, u) => sum + (u.chat_messages_count || 0), 0);
+
+            document.getElementById('totalUsers').textContent = users.length;
+            document.getElementById('adminCount').textContent = admins;
+            document.getElementById('activeCount').textContent = active;
+            document.getElementById('totalMessages').textContent = totalMessages;
+        }
+
+        function populateTable(users) {
+            const tbody = document.getElementById('usersTableBody');
+            tbody.innerHTML = '';
+
+            if (users.length === 0) {
+                document.getElementById('emptyState').style.display = 'block';
+                return;
+            }
+
+            users.forEach(user => {
+                const createdDate = new Date(user.created).toLocaleDateString('pt-BR');
+                const lastLoginDate = user.last_login ? new Date(user.last_login).toLocaleDateString('pt-BR') : 'Nunca';
+                const roleClass = user.role === 'admin' ? 'badge-admin' : 'badge-user';
+                const statusClass = user.active ? 'badge-active' : 'badge-inactive';
+                const statusText = user.active ? 'Ativo' : 'Inativo';
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <span>
+                            <i class="fas fa-user-circle"></i> ${escapeHtml(user.username)}
+                        </span>
+                    </td>
+                    <td>${escapeHtml(user.email)}</td>
+                    <td>
+                        <span class="badge ${roleClass}">
+                            ${user.role === 'admin' ? '<i class="fas fa-crown"></i> Admin' : 'Usuário'}
+                        </span>
+                    </td>
+                    <td>
+                        <span class="badge ${statusClass}">
+                            ${statusText}
+                        </span>
+                    </td>
+                    <td>${createdDate}</td>
+                    <td>${lastLoginDate}</td>
+                    <td>${user.ip ? `<span style="font-family: monospace; background: #f5f7fa; padding: 2px 6px; border-radius: 4px;">${escapeHtml(user.ip)}</span>` : '<span class="text-muted">-</span>'}</td>
+                    <td>
+                        <span class="badge bg-info">${user.chat_messages_count || 0}</span>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            document.getElementById('tableContainer').style.display = 'block';
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        async function logout() {
+            try {
+                const response = await fetch('/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    window.location.href = '/login';
+                }
+            } catch (error) {
+                console.error('Erro ao fazer logout:', error);
+                window.location.href = '/login';
+            }
+        }
+
+        // Função para carregar dispositivos conectados
+        async function loadDevices() {
+            document.getElementById('devicesLoadingSpinner').style.display = 'block';
+            document.getElementById('devicesTableContainer').style.display = 'none';
+            document.getElementById('devicesEmptyState').style.display = 'none';
+            document.getElementById('deviceStatsContainer').style.display = 'none';
+
+            try {
+                const response = await fetch('/api/monitor/devices', {timeout: 5000});
+
+                if (!response.ok) {
+                    console.warn('Aviso ao carregar dispositivos:', response.status);
+                    document.getElementById('devicesEmptyState').style.display = 'block';
+                    document.getElementById('devicesLoadingSpinner').style.display = 'none';
+                    return;
+                }
+
+                const data = await response.json();
+                populateDevicesTable(data.dispositivos || []);
+                loadDeviceStats();
+
+            } catch (error) {
+                console.warn('Aviso ao carregar dispositivos:', error.message);
+                document.getElementById('devicesEmptyState').style.display = 'block';
+            } finally {
+                document.getElementById('devicesLoadingSpinner').style.display = 'none';
+            }
+        }
+
+        function populateDevicesTable(devices) {
+            const tbody = document.getElementById('devicesTableBody');
+            tbody.innerHTML = '';
+
+            if (devices.length === 0) {
+                document.getElementById('devicesEmptyState').style.display = 'block';
+                return;
+            }
+
+            devices.forEach((device, index) => {
+                const connectedDate = new Date(device.connected_at).toLocaleString('pt-BR');
+                const systemInfo = device.system_info || {};
+                const ramDisplay = systemInfo.ram_percent ? `${systemInfo.ram_percent}%` : '-';
+                const diskDisplay = systemInfo.disk_percent ? `${systemInfo.disk_percent}%` : '-';
+                const vmStatus = systemInfo.eh_vm ? `Sim (${systemInfo.tipo_vm || 'Unknown'})` : 'Não';
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>#${index + 1}</td>
+                    <td><span class="badge bg-info">${escapeHtml(device.ip || '-')}</span></td>
+                    <td>${escapeHtml(systemInfo.ip_local || '-')}</td>
+                    <td>${escapeHtml(systemInfo.hostname || 'Unknown')}</td>
+                    <td>${escapeHtml(systemInfo.sistema || '-')}</td>
+                    <td>${escapeHtml(systemInfo.versao || '-')}</td>
+                    <td>${escapeHtml(systemInfo.arquitetura || '-')}</td>
+                    <td>${escapeHtml(systemInfo.processador || '-')}</td>
+                    <td>${ramDisplay} / ${diskDisplay}</td>
+                    <td><span class="badge ${systemInfo.eh_vm ? 'bg-warning' : 'bg-success'}">${vmStatus}</span></td>
+                    <td><small>${connectedDate}</small></td>
+                    <td><small class="text-muted" title="${device.user_agent}">${device.user_agent ? device.user_agent.substring(0, 30) + '...' : '-'}</small></td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            document.getElementById('devicesTableContainer').style.display = 'block';
+        }
+
+        async function loadDeviceStats() {
+            try {
+                const response = await fetch('/api/monitor/stats');
+
+                if (!response.ok) {
+                    console.error('Erro ao carregar stats:', response.status);
+                    return;
+                }
+
+                const data = await response.json();
+
+                document.getElementById('totalDevices').textContent = data.total_dispositivos || 0;
+                document.getElementById('totalSystems').textContent = data.total_sistemas_registrados || 0;
+                document.getElementById('totalChatMessages').textContent = data.total_mensagens || 0;
+                document.getElementById('deviceStatsContainer').style.display = 'grid';
+
+            } catch (error) {
+                console.error('Erro ao carregar stats:', error);
+            }
+        }
+
+        // Funções de exportação
+        document.getElementById('exportJsonBtn').addEventListener('click', () => {
+            window.location.href = '/api/monitor/messages/export';
+        });
+
+        document.getElementById('exportCsvBtn').addEventListener('click', () => {
+            window.location.href = '/api/monitor/devices/export/csv';
+        });
+
+        document.getElementById('refreshDevicesBtn').addEventListener('click', () => {
+            loadDevices();
+        });
+
+        // Função para carregar logs de autenticação
+        async function loadAuthLogs() {
+            try {
+                const resp = await fetch('/api/monitor/auth_logs');
+                if(!resp.ok){
+                    console.warn('Falha ao carregar auth logs:', resp.status);
+                    return;
+                }
+                const data = await resp.json();
+                const body = document.getElementById('authLogsBody');
+                if(!body) return;
+                body.innerHTML = '';
+                const logs = data.logs || [];
+                logs.slice().reverse().forEach(log => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${new Date(log.timestamp).toLocaleString('pt-BR')}</td>
+                        <td>${escapeHtml(log.event_type || '')}</td>
+                        <td>${escapeHtml(log.username || '')}</td>
+                        <td>${escapeHtml(log.ip || '')}</td>
+                        <td>${escapeHtml(log.details || '')}</td>
+                    `;
+                    body.appendChild(tr);
+                });
+            }catch(err){
+                console.error('Erro ao carregar auth logs:', err);
+            }
+        }
+
+        // Inicializar ao carregar página
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🟢 Monitor iniciando...');
+
+            checkAuth();
+            loadDevices().catch(err => console.warn('Erro ao carregar dispositivos:', err));
+            loadRegisteredUsers().catch(err => console.warn('Erro ao carregar usuarios registrados:', err));
+
+            setTimeout(() => {
+                loadUsers().catch(err => console.warn('Erro ao carregar usuários:', err));
+            }, 500);
+
+            setTimeout(() => {
+                loadAuthLogs().catch(err => console.warn('Erro ao carregar logs:', err));
+            }, 1000);
+
+            // Auto-refresh a cada 5 segundos
+            setInterval(() => {
+                loadDevices().catch(err => console.warn('Erro no refresh de dispositivos:', err));
+            }, 5000);
+
+            setInterval(() => {
+                loadUsers().catch(err => console.warn('Erro no refresh de usuários:', err));
+            }, 5000);
+
+            setInterval(() => {
+                loadAuthLogs().catch(err => console.warn('Erro no refresh de logs:', err));
+            }, 5000);
+
+            setInterval(() => {
+                loadRegisteredUsers().catch(err => console.warn('Erro no refresh de usuarios registrados:', err));
+            }, 5000);
+
+            console.log('🟢 Monitor inicializado com sucesso! [v20251220-DADOS-COMPLETOS]');
+            console.log('📊 Layout moderno com Painel de Controle carregado');
+            console.log('✅ Todas as funções funcionais: loadDevices, loadUsers, loadAuthLogs, loadRegisteredUsers');
+        });
+    </script>
+</body>
+</html>

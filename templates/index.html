@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exportador de Conexões - Dispositivos Conectados</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); min-height:100vh; color:#222; }
+        .navbar-top { background: rgba(0,0,0,0.1); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .navbar-top .navbar-brand { color: white !important; font-weight: bold; }
+        .container-main{max-width:1100px;margin:30px auto}
+        .card{border-radius:12px}
+        .info-section{background:#fff;padding:12px;border-radius:8px;margin-bottom:12px}
+        pre.sysinfo{background:#f8f9fa;padding:10px;border-radius:6px;overflow:auto}
+    </style>
+</head>
+<body>
+<!-- Navbar simples -->
+<nav class="navbar navbar-top sticky-top">
+    <div class="container-fluid px-3">
+        <span class="navbar-brand">
+            <i class="fas fa-shield-alt"></i> Monitor de Dispositivos
+        </span>
+        <div>
+            <a href="/chat" class="btn btn-sm btn-outline-light">
+                <i class="fas fa-comments"></i> Chat
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-main">
+    <div class="text-center text-white mb-4">
+        <h1><i class="fas fa-network-wired"></i> Monitor de Dispositivos Conectados</h1>
+        <p class="mb-0">Coleta e exporta informações dos dispositivos que se registrarem no servidor</p>
+    </div>
+
+    <div class="row g-3">
+        <!-- Controle / Coleta -->
+        <div class="col-lg-6">
+            <div class="card p-3">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="mb-0">Painel de Controle</h5>
+                    <div id="loading" style="display:none"> <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>
+                </div>
+
+                <p class="text-muted">Coletar informações dos dispositivos registrados e exportar os dados.</p>
+
+                <div class="d-grid gap-2 d-md-flex">
+                    <button class="btn btn-primary btn-custom" id="btnCollect" onclick="coletarInformacoes()">Coletar informações</button>
+                    
+                       <a class="btn btn-sm btn-outline-primary" href="/export/messages/json">Exportar JSON</a>
+                    <a class="btn btn-sm btn-outline-primary" href="/export/clients/csv">Exportar CSV</a>
+                    <a class="btn btn-sm btn-outline-primary" href="/export/clients/html">Exportar HTML</a>
+                    
+                </div>
+
+                <hr>
+                <h6>Registrar Novo Dispositivo</h6>
+                <div class="mb-3">
+                    <input type="text" id="regIP" class="form-control form-control-sm" placeholder="IP do dispositivo">
+                </div>
+                <div class="mb-3">
+                    <textarea id="regSystemInfo" class="form-control form-control-sm" rows="4" placeholder='{"sistema": "Windows", "version": "10", ...}'></textarea>
+                </div>
+                <button class="btn btn-sm btn-success" onclick="registrarDispositivoManual()">Registrar Dispositivo</button>
+
+                <hr>
+                <div id="systemInfo">
+                    <p class="text-muted">Nenhum dispositivo registrado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de clientes + Chat -->
+        <div class="col-lg-6">
+            <div class="card p-3 mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0">Dispositivos Conectados <small class="text-muted" id="clientsCount">(0)</small></h5>
+                </div>
+                <div id="clientsList" class="mb-2">
+                    <p class="text-muted">Nenhum cliente conectado</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-center text-white mt-4">Servidor local - cuide dos dados exportados</footer>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+<script>
+    // Auxiliares
+    function mostrarAlerta(msg, tipo){
+        // minimal: usa console e alert para dev
+        console.log(tipo, msg);
+    }
+
+    function escapeHtml(unsafe){
+        if(!unsafe) return '';
+        return String(unsafe)
+            .replaceAll('&','&amp;')
+            .replaceAll('<','&lt;')
+            .replaceAll('>','&gt;')
+            .replaceAll('"','&quot;')
+            .replaceAll("'","&#039;");
+    }
+
+    // Coleta centralizada
+    async function coletarInformacoes(){
+        const loading = document.getElementById('loading');
+        loading.style.display = 'inline-block';
+        try{
+            const resp = await fetch('/api/collect');
+            if(!resp.ok) throw new Error('Falha ao coletar');
+            const data = await resp.json();
+            const devices = data.devices || [];
+            exibirInformacoesDoSistema(devices);
+            updateClients(devices.map(d => ({ ip: d.ip||d.client_key, connected_at: d.registered_at, system_info: d.system_info }))); 
+            mostrarAlerta('Informações coletadas', 'success');
+        }catch(err){
+            console.error(err);
+            mostrarAlerta(err.message || 'Erro', 'error');
+        }finally{
+            loading.style.display = 'none';
+        }
+    }
+
+    // Registrar dispositivo manualmente (via form no dashboard)
+    async function registrarDispositivoManual(){
+        const ip = document.getElementById('regIP').value.trim();
+        const info = document.getElementById('regSystemInfo').value.trim();
+        if(!ip || !info){
+            alert('Preencha IP e informações de sistema (JSON)');
+            return;
+        }
+        try{
+            const systemInfo = JSON.parse(info);
+            const resp = await fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ client_id: ip, system_info: systemInfo })
+            });
+            if(!resp.ok) throw new Error('Falha ao registrar');
+            alert('Dispositivo registrado com sucesso!');
+            document.getElementById('regIP').value = '';
+            document.getElementById('regSystemInfo').value = '';
+            // atualizar lista
+            coletarInformacoes();
+        }catch(err){
+            console.error(err);
+            alert('Erro: ' + (err.message || 'Falha ao registrar'));
+        }
+    }
+
+    function exibirInformacoesDoSistema(devices){
+        const el = document.getElementById('systemInfo');
+        if(!el) return;
+        if(!devices || devices.length===0){
+            el.innerHTML = '<p class="text-muted">Nenhum dispositivo registrado.</p>';
+            return;
+        }
+        let html = '';
+        devices.forEach(d => {
+            const si = d.system_info || {};
+            html += '<div class="info-section">';
+            html += `<div class="d-flex justify-content-between"><strong>Dispositivo: <code>${escapeHtml(d.client_key||d.ip||'unknown')}</code></strong><small class="text-muted">${escapeHtml(d.registered_at||'')}</small></div>`;
+            html += `<div style="margin-top:8px"><pre class="sysinfo">${escapeHtml(JSON.stringify(si,null,2))}</pre></div>`;
+            html += '</div>';
+        });
+        el.innerHTML = html;
+    }
+
+    // Clients list
+    function updateClients(clients){
+        const el = document.getElementById('clientsList');
+        const countEl = document.getElementById('clientsCount');
+        if(!el) return;
+        el.innerHTML = '';
+        if(!clients || clients.length===0){
+            el.innerHTML = '<p class="text-muted">Nenhum cliente conectado</p>';
+            if(countEl) countEl.textContent = '(0)';
+            return;
+        }
+        clients.forEach(c=>{
+            const row = document.createElement('div');
+            row.className = 'd-flex justify-content-between align-items-center py-2 border-bottom';
+            row.innerHTML = `<div><code>${escapeHtml(c.ip)}</code></div><div><small class='text-muted'>${escapeHtml(c.connected_at||'')}</small></div>`;
+            el.appendChild(row);
+        });
+        if(countEl) countEl.textContent = `(${clients.length})`;
+        // mostra primeiro device no painel principal
+        if(clients[0] && clients[0].system_info){
+            exibirInformacoesDoSistema([{ client_key: clients[0].ip, ip: clients[0].ip, registered_at: clients[0].connected_at, system_info: clients[0].system_info }]);
+        }
+    }
+
+    // Chat via Socket.IO
+    const socket = io();
+
+    socket.on('connect', ()=>{
+        console.log('socket connected', socket.id);
+        // pedir lista de dispositivos registrados via HTTP
+        fetch('/api/collect').then(r=>r.json()).then(d=>{
+            const devices = d.devices || [];
+            updateClients(devices.map(dv => ({ ip: dv.ip || dv.client_key, connected_at: dv.registered_at, system_info: dv.system_info })));
+        }).catch(()=>{});
+    });
+
+    socket.on('chat_history', msgs=>{
+        const box = document.getElementById('chatMessages'); box.innerHTML='';
+        msgs.forEach(m=>{
+            const div = document.createElement('div'); div.className='mb-2';
+            div.innerHTML = `<strong>${escapeHtml(m.username||'anon')}:</strong> ${escapeHtml(m.message)} <small class='text-muted'>${new Date(m.timestamp).toLocaleTimeString()}</small>`;
+            box.appendChild(div);
+        });
+        box.scrollTop = box.scrollHeight;
+    });
+
+    socket.on('new_message', msg=>{
+        const box = document.getElementById('chatMessages');
+        const div = document.createElement('div'); div.className='mb-2';
+        div.innerHTML = `<strong>${escapeHtml(msg.username||'anon')}:</strong> ${escapeHtml(msg.message)} <small class='text-muted'>${new Date(msg.timestamp).toLocaleTimeString()}</small>`;
+        box.appendChild(div);
+        box.scrollTop = box.scrollHeight;
+    });
+
+    socket.on('clients_update', clients=>{
+        // server pode enviar lista de clientes conectados brutos
+        try{ updateClients(clients || []); }catch(e){}
+    });
+
+    function sendChat(){
+        const input = document.getElementById('chatInput');
+        const name = document.getElementById('chatName');
+        const text = input.value.trim(); if(!text) return;
+        const payload = { username: name.value.trim() || null, message: text };
+        socket.emit('chat_message', payload);
+        input.value = '';
+    }
+
+    // atalho Enter
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Enter' && document.activeElement && document.activeElement.id==='chatInput') sendChat(); });
+
+    // coleta inicial ao abrir (opcional)
+    window.addEventListener('load', ()=>{ 
+        /* coletarInformacoes(); */ 
+    });
+</script>
+</body>
+
+</html>
